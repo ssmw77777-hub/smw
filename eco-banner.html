@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>친환경 캠페인 배너</title>
+  <style>
+    :root {
+      --eco-primary: #2e7d32;
+      --eco-secondary: #66bb6a;
+      --eco-text: #133117;
+      --eco-bg: #f1f8e9;
+      --eco-white: #ffffff;
+      --eco-shadow: 0 8px 24px rgba(19, 49, 23, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 24px;
+      font-family: "Pretendard", "Noto Sans KR", system-ui, -apple-system, sans-serif;
+      background: #f7faf7;
+      color: var(--eco-text);
+    }
+
+    .eco-banner {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 20px;
+      align-items: center;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 28px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, var(--eco-bg) 0%, #dcedc8 100%);
+      border: 1px solid #c5e1a5;
+      box-shadow: var(--eco-shadow);
+      overflow: hidden;
+    }
+
+    .eco-banner__content h1 {
+      margin: 0 0 12px;
+      font-size: clamp(1.5rem, 2.4vw, 2rem);
+      line-height: 1.35;
+      color: var(--eco-text);
+    }
+
+    .eco-banner__content p {
+      margin: 0 0 20px;
+      font-size: 1rem;
+      line-height: 1.65;
+      color: #2f5e31;
+    }
+
+    .eco-banner__cta-wrap {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .eco-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      text-decoration: none;
+      font-weight: 700;
+      transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease;
+    }
+
+    .eco-button:focus-visible {
+      outline: 3px solid #1b5e20;
+      outline-offset: 3px;
+    }
+
+    .eco-button--primary {
+      background: var(--eco-primary);
+      color: var(--eco-white);
+      box-shadow: 0 4px 14px rgba(46, 125, 50, .3);
+    }
+
+    .eco-button--secondary {
+      background: var(--eco-white);
+      color: var(--eco-primary);
+      border-color: var(--eco-secondary);
+    }
+
+    .eco-button:hover {
+      transform: translateY(-1px);
+    }
+
+    .eco-banner__visual {
+      position: relative;
+      min-height: 220px;
+      border-radius: 16px;
+      background:
+        radial-gradient(circle at 20% 30%, rgba(255,255,255,.9) 0 8%, transparent 10%),
+        radial-gradient(circle at 75% 20%, rgba(255,255,255,.75) 0 8%, transparent 11%),
+        linear-gradient(160deg, #81c784 0%, #388e3c 100%);
+      isolation: isolate;
+    }
+
+    .eco-banner__badge {
+      position: absolute;
+      right: 14px;
+      top: 14px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, .92);
+      font-size: .85rem;
+      font-weight: 700;
+      color: #1b5e20;
+    }
+
+    .eco-banner__stats {
+      position: absolute;
+      left: 14px;
+      bottom: 14px;
+      margin: 0;
+      padding: 10px 12px;
+      background: rgba(255,255,255,.9);
+      border-radius: 10px;
+      font-size: .92rem;
+      line-height: 1.45;
+    }
+
+    @media (max-width: 860px) {
+      .eco-banner {
+        grid-template-columns: 1fr;
+        padding: 22px;
+      }
+
+      .eco-banner__visual {
+        order: -1;
+        min-height: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="eco-banner" aria-labelledby="eco-banner-title">
+    <div class="eco-banner__content">
+      <h1 id="eco-banner-title">지구를 위한 작은 실천, 오늘부터 시작하세요</h1>
+      <p>
+        탄소 절감 캠페인에 참여하고, 친환경 제품 선택으로 일상 속 지속가능성을 높여보세요.
+        사용량 분석 리포트와 맞춤형 실천 가이드를 제공합니다.
+      </p>
+      <div class="eco-banner__cta-wrap">
+        <a class="eco-button eco-button--primary" href="/campaign/join">캠페인 참여하기</a>
+        <a class="eco-button eco-button--secondary" href="/sustainability/report">지속가능성 리포트 보기</a>
+      </div>
+    </div>
+
+    <aside class="eco-banner__visual" aria-label="친환경 캠페인 요약 정보">
+      <span class="eco-banner__badge">GREEN IMPACT</span>
+      <p class="eco-banner__stats">
+        누적 참여자 <strong>12,840명</strong><br />
+        절감 추정 탄소량 <strong>29.4tCO₂</strong>
+      </p>
+    </aside>
+  </section>
+</body>
+</html>
