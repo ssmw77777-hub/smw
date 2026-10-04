@@ -50,6 +50,7 @@ var CHIC_WORKS = [
     var root = document.getElementById('chic');
     if (!root || root.dataset.ready) return;
     root.dataset.ready = '1';
+    root.classList.add('js');
 
     var $ = function (s, c) { return (c || root).querySelector(s); };
     var $$ = function (s, c) { return Array.prototype.slice.call((c || root).querySelectorAll(s)); };
@@ -90,11 +91,12 @@ var CHIC_WORKS = [
         return '<article class="ch-slide">' +
           '<div class="ch-slide__bg" style="' + bgStyle(w) + '"></div>' +
           (w.image ? '' : '<div class="ch-slide__mock">' + mock(w) + '</div>') +
-          '<div class="ch-slide__info"><div>' +
+          '<div class="ch-slide__info">' +
             '<div class="ch-slide__tags"><span>' + esc(CHIC_CATEGORIES[w.category] || w.category) + '</span><span>' + esc(w.year) + '</span></div>' +
             '<h3 class="ch-slide__title">' + esc(w.title) + '</h3>' +
             '<p class="ch-slide__desc">' + esc(w.desc || w.client) + '</p>' +
-          '</div><a class="ch-slide__link" ' + linkAttr(w.url) + '>View<br>Project ↗</a></div>' +
+            '<a class="ch-slide__link" ' + linkAttr(w.url) + '>View Project ↗</a>' +
+          '</div>' +
         '</article>';
       }).join('');
 
@@ -155,9 +157,9 @@ var CHIC_WORKS = [
         var list = CHIC_WORKS.filter(function (w) { return cat === 'all' || w.category === cat; });
         grid.innerHTML = list.slice(0, shown).map(function (w) {
           return '<a class="ch-card" ' + linkAttr(w.url) + '>' +
-            '<div class="ch-card__thumb"><div class="bg" style="' + bgStyle(w) + '"></div>' + (w.image ? '' : mock(w)) + '<span class="ch-card__view">VIEW</span></div>' +
-            '<div class="ch-card__meta"><div><h3 class="ch-card__title">' + esc(w.title) + '</h3><p class="ch-card__client">' + esc(w.client) + ' · ' + esc(w.year) + '</p></div>' +
-            '<span class="ch-card__tag">' + esc(CHIC_CATEGORIES[w.category] || w.category) + '</span></div></a>';
+            '<div class="ch-card__thumb"><div class="bg" style="' + bgStyle(w) + '"></div>' + (w.image ? '' : mock(w)) + '</div>' +
+            '<div class="ch-card__meta"><div class="ch-chips"><span>' + esc(CHIC_CATEGORIES[w.category] || w.category) + '</span><span>' + esc(w.year) + '</span></div>' +
+            '<h3 class="ch-card__title">' + esc(w.title) + '</h3><p class="ch-card__client">' + esc(w.client) + '</p></div></a>';
         }).join('');
         more.parentNode.hidden = list.length <= shown;
         $$('.ch-card', grid).forEach(function (el, i) { setTimeout(function () { el.classList.add('is-in'); }, 60 * (i % CHIC_CONFIG.worksPerPage)); });
@@ -170,6 +172,17 @@ var CHIC_WORKS = [
       more.addEventListener('click', function () { shown += CHIC_CONFIG.worksPerPage; render(); });
       render();
     })();
+
+    /* ---------- 서비스 행: 카테고리별 작업물 썸네일 (최대 3개) ---------- */
+    $$('.ch-svc[data-cat]').forEach(function (row) {
+      var box = $('.ch-svc__works', row);
+      var list = CHIC_WORKS.filter(function (w) { return w.category === row.dataset.cat; }).slice(0, 3);
+      box.innerHTML = list.length ? list.map(function (w) {
+        return '<a class="ch-mini" ' + linkAttr(w.url) + '>' +
+          '<div class="ch-mini__thumb"><div class="bg" style="' + bgStyle(w) + '"></div>' + (w.image ? '' : mock(w)) + '</div>' +
+          '<div class="ch-mini__cap"><b>' + esc(w.title) + '</b><span>' + esc(w.client) + '</span></div></a>';
+      }).join('') : '<p class="ch-svc__empty">작업물을 준비 중입니다.</p>';
+    });
 
     /* ---------- 헤더 / 모바일 메뉴 ---------- */
     var header = $('#chHeader'), topBtn = $('#chTopBtn'), lastY = window.scrollY;
@@ -203,8 +216,17 @@ var CHIC_WORKS = [
     $$('.js-kakao').forEach(function (a) { a.href = CHIC_CONFIG.kakaoUrl; a.target = '_blank'; a.rel = 'noopener'; });
     $('#chYear').textContent = new Date().getFullYear();
 
+    // NOTICE 카드 닫기 (같은 방문 동안 다시 표시하지 않음)
+    var notice = $('#chNotice');
+    if (notice) {
+      try { if (sessionStorage.getItem('chNoticeClosed')) notice.hidden = true; } catch (e) {}
+      $('#chNoticeX').addEventListener('click', function () {
+        notice.hidden = true;
+        try { sessionStorage.setItem('chNoticeClosed', '1'); } catch (e) {}
+      });
+    }
+
     /* ---------- 히어로 ---------- */
-    requestAnimationFrame(function () { $('.ch-hero').classList.add('is-in'); });
     var words = $$('#chRotate > span'), w = 0;
     if (words.length > 1 && !reduce) setInterval(function () {
       words[w].classList.remove('is-on'); w = (w + 1) % words.length; words[w].classList.add('is-on');

@@ -3,7 +3,7 @@
   <!-- ================= HEADER ================= -->
   <header class="ch-header" id="chHeader">
     <div class="ch-wrap ch-header__in">
-      <a href="#chTop" class="ch-logo">CHIC<i class="dot"></i><small>studio</small></a>
+      <a href="#chTop" class="ch-logo"><b>C</b>CHIC STUDIO</a>
       <nav class="ch-nav" aria-label="주요 메뉴">
         <a href="#chAbout">About</a>
         <a href="#chService">Service</a>
@@ -11,49 +11,95 @@
         <a href="#chProcess">Process</a>
         <a href="#chPrice">Price</a>
       </nav>
-      <a href="#chContact" class="ch-btn ch-btn--dark ch-header__cta">프로젝트 문의 <span class="arr">→</span></a>
-      <button class="ch-burger" id="chBurger" aria-label="메뉴 열기" aria-expanded="false"><span></span><span></span></button>
+      <a href="#chContact" class="ch-btn ch-btn--blue ch-header__cta">프로젝트 문의</a>
+      <button class="ch-burger" id="chBurger" aria-label="메뉴 열기" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </header>
 
   <div class="ch-mmenu" id="chMenu" aria-hidden="true">
-    <a href="#chAbout">About</a>
-    <a href="#chService">Service</a>
-    <a href="#chWorks"><span class="serif">Works</span></a>
-    <a href="#chProcess">Process</a>
-    <a href="#chContact">Contact</a>
-    <div class="ch-mmenu__foot">hello@chicstudio.kr · 010-0000-0000</div>
+    <nav>
+      <a href="#chAbout"><small>01</small>About</a>
+      <a href="#chService"><small>02</small>Service</a>
+      <a href="#chWorks"><small>03</small>Works</a>
+      <a href="#chProcess"><small>04</small>Process</a>
+      <a href="#chContact"><small>05</small>Contact</a>
+    </nav>
+    <div class="ch-mmenu__foot">hello@chicstudio.kr<br>010-0000-0000</div>
   </div>
 
   <!-- ================= HERO ================= -->
   <section class="ch-hero" id="chTop">
-    <div class="ch-hero__blob" aria-hidden="true"></div>
+    <div class="ch-hero__bg" aria-hidden="true">
+      <span class="ch-hero__glow g1"></span><span class="ch-hero__glow g2"></span>
+      <span class="ch-hero__grid"></span>
+    </div>
+
+    <!-- NOTICE 카드 (닫기 가능) -->
+    <aside class="ch-notice" id="chNotice">
+      <button type="button" class="ch-notice__x" id="chNoticeX" aria-label="공지 닫기">×</button>
+      <span class="ch-notice__label">NOTICE</span>
+      <strong class="ch-notice__title">프로젝트<br>상담 안내</strong>
+      <p>간단한 내용만 남겨주시면 영업일 기준 24시간 이내에 연락드립니다.</p>
+      <p class="ch-notice__time">평일 10:00 – 19:00</p>
+      <a href="#chContact" class="ch-notice__btn">상담 신청 →</a>
+    </aside>
+
+    <div class="ch-wrap ch-hero__in">
+      <span class="ch-hero__mark" aria-hidden="true">C</span>
+      <span class="ch-hero__badge"><b>IMWEB</b> 아임웹 전문 웹 에이전시</span>
+      <h1 class="ch-hero__title">
+        <span class="line">Websites that feel</span>
+        <span class="line"><span class="ch-rotate" id="chRotate"><span class="is-on">chic.</span><span>clear.</span><span>yours.</span></span></span>
+      </h1>
+      <p class="ch-hero__meta">WEB DESIGN &amp; BUILD · SEOUL, KOREA — SINCE 2019</p>
+      <p class="ch-hero__desc">브랜드의 결을 읽고, <strong>아임웹 위에서 가장 아름답게</strong> 구현합니다. <br class="pc">기획부터 디자인, 퍼블리싱, 오픈 후 운영까지 한 팀이 끝까지 책임집니다.</p>
+      <div class="ch-hero__btns">
+        <a href="#chWorks" class="ch-btn ch-btn--white">포트폴리오 보기</a>
+        <a href="#chContact" class="ch-btn ch-btn--ghost">프로젝트 문의</a>
+      </div>
+      <div class="ch-hero__stats">
+        <div><strong>320+</strong><span>누적 프로젝트</span></div>
+        <div><strong>4.9</strong><span>고객 만족도</span></div>
+        <div><strong>3주</strong><span>평균 제작기간</span></div>
+      </div>
+    </div>
+    <a href="#chAbout" class="ch-hero__scroll" aria-label="아래로 스크롤"><span>SCROLL</span><i></i></a>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section class="ch-section ch-about" id="chAbout">
     <div class="ch-wrap">
-      <div class="ch-hero__top">
-        <span class="ch-hero__badge"><b>IMWEB</b> 아임웹 전문 웹 에이전시</span>
-        <p class="ch-hero__meta">Web Design &amp; Build<br>Seoul, Korea — Since 2019</p>
+      <div class="ch-shead rv">
+        <span class="ch-shead__en">ABOUT US</span>
+        <h2 class="ch-shead__title">예쁘기만 한 홈페이지는 많습니다.<br><span class="grad">저희는 고객이 머물고, 문의하고, 다시 찾아오는</span><br>working 웹사이트를 만듭니다.</h2>
+        <p class="ch-shead__desc">CHIC STUDIO는 아임웹 플랫폼에 특화된 웹 디자인 스튜디오입니다. 템플릿을 고치는 수준을 넘어,
+          커스텀 코드와 섬세한 디자인 시스템으로 브랜드만의 웹사이트를 완성합니다. 오픈 후에도
+          대표님이 직접 관리할 수 있도록 운영 교육까지 함께 제공합니다.</p>
       </div>
 
-      <h1 class="ch-hero__title">
-        <span class="line"><span>Websites</span></span>
-        <span class="line"><span>that feel <i class="pill" aria-hidden="true"></i></span></span>
-        <span class="line"><span><em class="serif ch-rotate" id="chRotate"><span class="is-on">chic.</span><span>clear.</span><span>yours.</span></em></span></span>
-      </h1>
-
-      <div class="ch-hero__bottom">
-        <p class="ch-hero__desc">브랜드의 결을 읽고, <strong>아임웹 위에서 가장 아름답게</strong> 구현합니다. 기획부터 디자인, 퍼블리싱, 오픈 후 운영까지 한 팀이 끝까지 책임집니다.</p>
-        <div class="ch-hero__stats">
-          <div><strong>320+</strong>누적 프로젝트</div>
-          <div><strong>4.9</strong>고객 만족도</div>
-          <div><strong>3주</strong>평균 제작기간</div>
+      <div class="ch-about__cards">
+        <div class="ch-acard rv">
+          <div class="ch-vis ch-vis--orb" aria-hidden="true"></div>
+          <strong data-count="320">0</strong><span>누적 프로젝트</span>
         </div>
-        <a href="#chFeature" class="ch-scroll" aria-label="아래로 스크롤">
-          <svg viewBox="0 0 100 100" aria-hidden="true">
-            <defs><path id="chCircle" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0"/></defs>
-            <text><textPath href="#chCircle">SCROLL DOWN · SCROLL DOWN · </textPath></text>
-          </svg>
-          <i>↓</i>
-        </a>
+        <div class="ch-acard rv rv-d1">
+          <div class="ch-vis ch-vis--ring" aria-hidden="true"></div>
+          <strong data-count="92" data-suffix="%">0</strong><span>재의뢰 · 소개율</span>
+        </div>
+        <div class="ch-acard rv rv-d2">
+          <div class="ch-vis ch-vis--beam" aria-hidden="true"></div>
+          <strong data-count="7" data-suffix="yr">0</strong><span>아임웹 제작 경력</span>
+        </div>
+      </div>
+
+      <div class="ch-about__motto rv">
+        <p class="ch-about__quote">Less, but better.</p>
+        <ul>
+          <li><b>Planning</b><span>기획 · 구조설계</span></li>
+          <li><b>Design</b><span>UI · 브랜딩</span></li>
+          <li><b>Build</b><span>아임웹 · 커스텀 코드</span></li>
+          <li><b>Care</b><span>운영 · 유지보수</span></li>
+        </ul>
       </div>
     </div>
   </section>
@@ -61,21 +107,79 @@
   <!-- ================= MARQUEE ================= -->
   <div class="ch-marquee" aria-hidden="true">
     <div class="ch-marquee__track">
-      <span>Brand Website <em class="serif">Shopping Mall</em> Landing Page <em class="serif">Maintenance</em> Imweb Custom Code</span>
-      <span>Brand Website <em class="serif">Shopping Mall</em> Landing Page <em class="serif">Maintenance</em> Imweb Custom Code</span>
+      <span>Brand Website · <b>Shopping Mall</b> · Landing Page · <b>Maintenance</b> · Imweb Custom Code · </span>
+      <span>Brand Website · <b>Shopping Mall</b> · Landing Page · <b>Maintenance</b> · Imweb Custom Code · </span>
     </div>
   </div>
+
+  <!-- ================= SERVICE (번호형 레이아웃) =================
+       ▶ data-cat 이 있는 행은 CHIC_WORKS 에서 해당 카테고리 작업물 썸네일이 자동으로 들어갑니다. -->
+  <section class="ch-section ch-service" id="chService">
+    <div class="ch-wrap">
+      <div class="ch-shead rv">
+        <span class="ch-shead__en">SERVICE</span>
+        <h2 class="ch-shead__title">필요한 만큼, <span class="grad">정확하게</span> 만듭니다</h2>
+        <p class="ch-shead__desc">브랜드 규모와 목적에 맞는 서비스를 선택하세요. 모든 프로젝트는 반응형(PC·모바일)으로 제작됩니다.</p>
+      </div>
+
+      <div class="ch-svc rv" data-cat="corporate">
+        <div class="ch-svc__head">
+          <span class="ch-svc__no">01</span>
+          <h3 class="ch-svc__name">브랜드 홈페이지</h3>
+          <span class="ch-svc__en">CORPORATE &amp; BRAND SITE</span>
+          <p class="ch-svc__desc">회사·브랜드의 신뢰도를 높이는 공식 홈페이지. 정보 구조 설계부터 카피 가이드까지 함께합니다.</p>
+          <div class="ch-chips"><span>기업 소개</span><span>병원·클리닉</span><span>스튜디오</span><span>포트폴리오</span></div>
+        </div>
+        <div class="ch-svc__works"></div>
+      </div>
+
+      <div class="ch-svc rv" data-cat="shop">
+        <div class="ch-svc__head">
+          <span class="ch-svc__no">02</span>
+          <h3 class="ch-svc__name">쇼핑몰 구축</h3>
+          <span class="ch-svc__en">ONLINE STORE</span>
+          <p class="ch-svc__desc">상품 상세, 결제, 회원·적립금 설정까지. 구매 전환을 고려한 아임웹 쇼핑몰을 구축합니다.</p>
+          <div class="ch-chips"><span>상세페이지</span><span>PG 연동</span><span>정기구독</span><span>해외몰</span></div>
+        </div>
+        <div class="ch-svc__works"></div>
+      </div>
+
+      <div class="ch-svc rv" data-cat="landing">
+        <div class="ch-svc__head">
+          <span class="ch-svc__no">03</span>
+          <h3 class="ch-svc__name">랜딩 · 이벤트 페이지</h3>
+          <span class="ch-svc__en">LANDING PAGE</span>
+          <p class="ch-svc__desc">광고 유입에 최적화된 원페이지. 문의·예약 폼과 전환 추적(GA4, 메타 픽셀) 세팅을 포함합니다.</p>
+          <div class="ch-chips"><span>DB 수집</span><span>상담 예약</span><span>프로모션</span></div>
+        </div>
+        <div class="ch-svc__works"></div>
+      </div>
+
+      <div class="ch-svc rv">
+        <div class="ch-svc__head">
+          <span class="ch-svc__no">04</span>
+          <h3 class="ch-svc__name">리뉴얼 · 유지보수</h3>
+          <span class="ch-svc__en">RENEWAL &amp; CARE</span>
+          <p class="ch-svc__desc">기존 사이트의 디자인 개선, 커스텀 코드 기능 추가, 월 단위 운영 대행까지 지원합니다.</p>
+        </div>
+        <div class="ch-svc__works ch-svc__works--tiles">
+          <div class="ch-tile"><div class="ch-vis ch-vis--swirl" aria-hidden="true"></div><b>디자인 리뉴얼</b></div>
+          <div class="ch-tile"><div class="ch-vis ch-vis--grid" aria-hidden="true"></div><b>커스텀 코드</b></div>
+          <div class="ch-tile"><div class="ch-vis ch-vis--orb" aria-hidden="true"></div><b>월 관리</b></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- ================= FEATURED PORTFOLIO BANNER =================
        ▶ 슬라이드 내용은 하단 <script> 의 CHIC_WORKS 배열에서 featured: true 인 항목으로 자동 생성됩니다. -->
   <section class="ch-section ch-feature" id="chFeature">
+    <div class="ch-feature__bg" aria-hidden="true"></div>
     <div class="ch-wrap">
-      <div class="ch-head">
-        <div>
-          <span class="ch-eyebrow rv">Featured Work</span>
-          <h2 class="ch-title rv rv-d1">최근 작업한<br><em class="serif">selected</em> 프로젝트</h2>
-        </div>
-        <p class="rv rv-d2">각 브랜드의 목적에 맞춰 설계하고 아임웹으로 구현한 대표 포트폴리오입니다.</p>
+      <div class="ch-shead ch-shead--light rv">
+        <span class="ch-shead__en">FEATURED WORK</span>
+        <h2 class="ch-shead__title">최근 작업한 <span class="grad">selected</span> 프로젝트</h2>
+        <p class="ch-shead__desc">각 브랜드의 목적에 맞춰 설계하고 아임웹으로 구현한 대표 포트폴리오입니다.</p>
       </div>
 
       <div class="ch-slider rv" id="chSlider">
@@ -94,120 +198,37 @@
     </div>
   </section>
 
-  <!-- ================= ABOUT ================= -->
-  <section class="ch-section ch-about" id="chAbout">
-    <div class="ch-wrap ch-about__grid">
-      <div class="ch-about__visual rv">
-        <div class="big">Less,<br>but better.</div>
-        <ul>
-          <li><span>Planning</span><span>기획 · 구조설계</span></li>
-          <li><span>Design</span><span>UI · 브랜딩</span></li>
-          <li><span>Build</span><span>아임웹 · 커스텀 코드</span></li>
-          <li><span>Care</span><span>운영 · 유지보수</span></li>
-        </ul>
-      </div>
-      <div>
-        <span class="ch-eyebrow rv">About Us</span>
-        <p class="ch-about__lead rv rv-d1" style="margin-top:24px">
-          예쁘기만 한 홈페이지는 많습니다.<br>
-          <span class="hl">저희는 고객이 머물고, 문의하고, 다시 찾아오는</span>
-          <em class="serif">working</em> 웹사이트를 만듭니다.
-        </p>
-        <p class="ch-about__text rv rv-d2">
-          CHIC STUDIO는 아임웹 플랫폼에 특화된 웹 디자인 스튜디오입니다. 템플릿을 고치는 수준을 넘어,
-          커스텀 코드와 섬세한 디자인 시스템으로 브랜드만의 웹사이트를 완성합니다. 오픈 후에도
-          대표님이 직접 관리할 수 있도록 운영 교육까지 함께 제공합니다.
-        </p>
-        <div class="ch-about__counter rv rv-d3">
-          <div><strong data-count="320">0</strong><span>누적 프로젝트</span></div>
-          <div><strong data-count="92" data-suffix="%">0</strong><span>재의뢰 · 소개율</span></div>
-          <div><strong data-count="7" data-suffix="yr">0</strong><span>아임웹 제작 경력</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= SERVICE ================= -->
-  <section class="ch-section ch-service" id="chService">
-    <div class="ch-wrap">
-      <div class="ch-head">
-        <div>
-          <span class="ch-eyebrow rv">Service</span>
-          <h2 class="ch-title rv rv-d1">필요한 만큼,<br><em class="ko-accent">정확하게</em> 만듭니다</h2>
-        </div>
-        <p class="rv rv-d2">브랜드 규모와 목적에 맞는 서비스를 선택하세요. 모든 프로젝트는 반응형(PC·모바일)으로 제작됩니다.</p>
-      </div>
-
-      <div class="ch-service__list">
-        <div class="ch-svc rv">
-          <span class="ch-svc__no">01</span>
-          <h3 class="ch-svc__name">브랜드 홈페이지<small>Corporate &amp; Brand Site</small></h3>
-          <div class="ch-svc__desc">회사·브랜드의 신뢰도를 높이는 공식 홈페이지. 정보 구조 설계부터 카피 가이드까지 함께합니다.
-            <div class="ch-svc__chips"><span>기업 소개</span><span>병원·클리닉</span><span>스튜디오</span><span>포트폴리오</span></div>
-          </div>
-          <span class="ch-svc__arr">↗</span>
-        </div>
-        <div class="ch-svc rv">
-          <span class="ch-svc__no">02</span>
-          <h3 class="ch-svc__name">쇼핑몰 구축<small>Online Store</small></h3>
-          <div class="ch-svc__desc">상품 상세, 결제, 회원·적립금 설정까지. 구매 전환을 고려한 아임웹 쇼핑몰을 구축합니다.
-            <div class="ch-svc__chips"><span>상세페이지</span><span>PG 연동</span><span>정기구독</span><span>해외몰</span></div>
-          </div>
-          <span class="ch-svc__arr">↗</span>
-        </div>
-        <div class="ch-svc rv">
-          <span class="ch-svc__no">03</span>
-          <h3 class="ch-svc__name">랜딩 · 이벤트 페이지<small>Landing Page</small></h3>
-          <div class="ch-svc__desc">광고 유입에 최적화된 원페이지. 문의·예약 폼과 전환 추적(GA4, 메타 픽셀) 세팅을 포함합니다.
-            <div class="ch-svc__chips"><span>DB 수집</span><span>상담 예약</span><span>프로모션</span></div>
-          </div>
-          <span class="ch-svc__arr">↗</span>
-        </div>
-        <div class="ch-svc rv">
-          <span class="ch-svc__no">04</span>
-          <h3 class="ch-svc__name">리뉴얼 · 유지보수<small>Renewal &amp; Care</small></h3>
-          <div class="ch-svc__desc">기존 사이트의 디자인 개선, 커스텀 코드 기능 추가, 월 단위 운영 대행까지 지원합니다.
-            <div class="ch-svc__chips"><span>디자인 리뉴얼</span><span>커스텀 코드</span><span>월 관리</span></div>
-          </div>
-          <span class="ch-svc__arr">↗</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ================= WORKS GRID =================
        ▶ 카드 목록은 하단 <script> 의 CHIC_WORKS 배열로 자동 생성됩니다. -->
   <section class="ch-section ch-works" id="chWorks">
     <div class="ch-wrap">
-      <div class="ch-head">
-        <div>
-          <span class="ch-eyebrow rv">Portfolio</span>
-          <h2 class="ch-title rv rv-d1">All <em class="serif">Works</em></h2>
-        </div>
-        <p class="rv rv-d2">카테고리를 선택해 작업물을 살펴보세요. 카드를 클릭하면 실제 사이트로 이동합니다.</p>
+      <div class="ch-shead rv">
+        <span class="ch-shead__en">PORTFOLIO</span>
+        <h2 class="ch-shead__title">All <span class="grad">Works</span></h2>
+        <p class="ch-shead__desc">카테고리를 선택해 작업물을 살펴보세요. 카드를 클릭하면 실제 사이트로 이동합니다.</p>
       </div>
       <div class="ch-filter rv" id="chFilter" role="tablist"></div>
       <div class="ch-grid" id="chGrid"></div>
-      <div class="ch-works__more"><button type="button" class="ch-btn ch-btn--line" id="chMore">더 보기 <span class="arr">+</span></button></div>
+      <div class="ch-works__more"><button type="button" class="ch-btn ch-btn--line" id="chMore">더 보기 +</button></div>
     </div>
   </section>
 
   <!-- ================= PROCESS ================= -->
   <section class="ch-section ch-process" id="chProcess">
+    <div class="ch-process__big" aria-hidden="true">Process</div>
     <div class="ch-wrap">
-      <div class="ch-head">
-        <div>
-          <span class="ch-eyebrow rv">Process</span>
-          <h2 class="ch-title rv rv-d1">문의부터 오픈까지,<br><em class="serif">5 steps</em></h2>
-        </div>
-        <p class="rv rv-d2">단계마다 결과물을 공유하고 피드백을 반영합니다. 진행 상황을 언제든 확인할 수 있습니다.</p>
+      <div class="ch-shead rv">
+        <span class="ch-shead__en">PROCESS</span>
+        <h2 class="ch-shead__title">문의부터 오픈까지, <span class="grad">5 steps</span></h2>
+        <p class="ch-shead__desc">단계마다 결과물을 공유하고 피드백을 반영합니다. 진행 상황을 언제든 확인할 수 있습니다.</p>
       </div>
       <div class="ch-steps">
-        <div class="ch-step rv"><span class="ch-step__time">1~2일</span><span class="ch-step__no">01</span><h3 class="ch-step__name">상담 · 견적</h3><span class="ch-step__en">Consulting</span><p class="ch-step__desc">목표와 예산, 일정을 파악하고 맞춤 견적을 안내드립니다.</p></div>
-        <div class="ch-step rv rv-d1"><span class="ch-step__time">3~5일</span><span class="ch-step__no">02</span><h3 class="ch-step__name">기획</h3><span class="ch-step__en">Planning</span><p class="ch-step__desc">사이트맵과 와이어프레임으로 페이지 구조를 설계합니다.</p></div>
-        <div class="ch-step rv rv-d2"><span class="ch-step__time">1~2주</span><span class="ch-step__no">03</span><h3 class="ch-step__name">디자인</h3><span class="ch-step__en">Design</span><p class="ch-step__desc">메인 시안 확정 후 서브페이지까지 디자인을 확장합니다.</p></div>
-        <div class="ch-step rv rv-d3"><span class="ch-step__time">1~2주</span><span class="ch-step__no">04</span><h3 class="ch-step__name">구축</h3><span class="ch-step__en">Build</span><p class="ch-step__desc">아임웹 세팅과 커스텀 코드로 PC·모바일을 구현합니다.</p></div>
-        <div class="ch-step rv rv-d3"><span class="ch-step__time">상시</span><span class="ch-step__no">05</span><h3 class="ch-step__name">오픈 · 운영</h3><span class="ch-step__en">Launch &amp; Care</span><p class="ch-step__desc">도메인 연결, SEO 세팅, 관리자 교육 후 오픈합니다.</p></div>
+        <div class="ch-step ch-step--vis rv"><div class="ch-vis ch-vis--swirl" aria-hidden="true"></div><span class="ch-step__no">01</span><h3 class="ch-step__name">상담 · 견적</h3><span class="ch-step__en">CONSULTING · 1~2일</span><p class="ch-step__desc">목표와 예산, 일정을 파악하고 맞춤 견적을 안내드립니다.</p></div>
+        <div class="ch-step rv rv-d1"><span class="ch-step__no">02</span><h3 class="ch-step__name">기획</h3><span class="ch-step__en">PLANNING · 3~5일</span><p class="ch-step__desc">사이트맵과 와이어프레임으로 페이지 구조를 설계합니다.</p></div>
+        <div class="ch-step ch-step--vis rv rv-d2"><div class="ch-vis ch-vis--ring" aria-hidden="true"></div><span class="ch-step__no">03</span><h3 class="ch-step__name">디자인</h3><span class="ch-step__en">DESIGN · 1~2주</span><p class="ch-step__desc">메인 시안 확정 후 서브페이지까지 디자인을 확장합니다.</p></div>
+        <div class="ch-step rv"><span class="ch-step__no">04</span><h3 class="ch-step__name">구축</h3><span class="ch-step__en">BUILD · 1~2주</span><p class="ch-step__desc">아임웹 세팅과 커스텀 코드로 PC·모바일을 구현합니다.</p></div>
+        <div class="ch-step ch-step--blue rv rv-d1"><span class="ch-step__no">05</span><h3 class="ch-step__name">오픈 · 운영</h3><span class="ch-step__en">LAUNCH &amp; CARE · 상시</span><p class="ch-step__desc">도메인 연결, SEO 세팅, 관리자 교육 후 오픈합니다.</p></div>
+        <div class="ch-step ch-step--vis ch-step--only rv rv-d2" aria-hidden="true"><div class="ch-vis ch-vis--beam"></div></div>
       </div>
     </div>
   </section>
@@ -215,12 +236,10 @@
   <!-- ================= PRICING ================= -->
   <section class="ch-section ch-price" id="chPrice">
     <div class="ch-wrap">
-      <div class="ch-head">
-        <div>
-          <span class="ch-eyebrow rv">Price</span>
-          <h2 class="ch-title rv rv-d1">투명한 <em class="serif">pricing</em></h2>
-        </div>
-        <p class="rv rv-d2">프로젝트 범위에 따라 금액이 달라질 수 있습니다. 정확한 견적은 상담 후 안내드립니다.</p>
+      <div class="ch-shead rv">
+        <span class="ch-shead__en">PRICE</span>
+        <h2 class="ch-shead__title">투명한 <span class="grad">pricing</span></h2>
+        <p class="ch-shead__desc">프로젝트 범위에 따라 금액이 달라질 수 있습니다. 정확한 견적은 상담 후 안내드립니다.</p>
       </div>
       <div class="ch-price__grid">
         <div class="ch-plan rv">
@@ -230,7 +249,7 @@
           <ul class="ch-plan__list">
             <li>원페이지 (최대 7섹션)</li><li>반응형 PC · 모바일</li><li>문의 폼 · 카카오 채널 연동</li><li>기본 SEO 세팅</li><li>무상 수정 1개월</li>
           </ul>
-          <a href="#chContact" class="ch-btn ch-btn--line">상담 신청 <span class="arr">→</span></a>
+          <a href="#chContact" class="ch-btn ch-btn--line">상담 신청</a>
         </div>
         <div class="ch-plan ch-plan--hot rv rv-d1">
           <span class="ch-plan__badge">BEST</span>
@@ -240,7 +259,7 @@
           <ul class="ch-plan__list">
             <li>메인 + 서브 7페이지</li><li>맞춤 디자인 시안 2종</li><li>커스텀 코드 인터랙션</li><li>GA4 · 메타 픽셀 세팅</li><li>관리자 교육 · 무상 수정 2개월</li>
           </ul>
-          <a href="#chContact" class="ch-btn ch-btn--light">상담 신청 <span class="arr">→</span></a>
+          <a href="#chContact" class="ch-btn ch-btn--white">상담 신청</a>
         </div>
         <div class="ch-plan rv rv-d2">
           <span class="ch-plan__name">Premium</span>
@@ -249,7 +268,7 @@
           <ul class="ch-plan__list">
             <li>페이지 수 협의 (쇼핑몰 포함)</li><li>상품 상세페이지 디자인</li><li>결제 · 회원 · 적립금 세팅</li><li>고급 커스텀 기능 개발</li><li>무상 유지보수 3개월</li>
           </ul>
-          <a href="#chContact" class="ch-btn ch-btn--line">상담 신청 <span class="arr">→</span></a>
+          <a href="#chContact" class="ch-btn ch-btn--line">상담 신청</a>
         </div>
       </div>
       <p class="ch-price__note">* VAT 별도 · 아임웹 요금제 및 도메인 비용은 별도입니다.</p>
@@ -259,16 +278,14 @@
   <!-- ================= REVIEW ================= -->
   <section class="ch-section ch-review">
     <div class="ch-wrap">
-      <div class="ch-head">
-        <div>
-          <span class="ch-eyebrow rv">Review</span>
-          <h2 class="ch-title rv rv-d1">고객이 말하는<br><em class="serif">CHIC</em></h2>
-        </div>
+      <div class="ch-shead rv">
+        <span class="ch-shead__en">REVIEW</span>
+        <h2 class="ch-shead__title">고객이 말하는 <span class="grad">CHIC</span></h2>
       </div>
       <div class="ch-review__grid">
-        <div class="ch-quote rv"><span class="ch-quote__mark">“</span><p>막연하게 생각했던 브랜드 느낌을 정확히 짚어주셨어요. 오픈 후 문의량이 눈에 띄게 늘었습니다.</p><div class="ch-quote__who"><i>K</i><div><b>김○○ 대표</b><span>라이프스타일 브랜드</span></div></div></div>
-        <div class="ch-quote rv rv-d1"><span class="ch-quote__mark">“</span><p>아임웹으로 이 정도까지 가능하다는 게 놀라웠습니다. 관리 교육 덕분에 지금은 직접 수정하고 있어요.</p><div class="ch-quote__who"><i>L</i><div><b>이○○ 원장</b><span>피부과 클리닉</span></div></div></div>
-        <div class="ch-quote rv rv-d2"><span class="ch-quote__mark">“</span><p>일정이 촉박했는데 단계마다 빠르게 공유해 주셔서 안심하고 맡길 수 있었습니다. 다음 프로젝트도 함께해요.</p><div class="ch-quote__who"><i>P</i><div><b>박○○ 팀장</b><span>IT 스타트업 마케팅</span></div></div></div>
+        <div class="ch-quote rv"><div class="ch-quote__stars" aria-label="별점 5점">★★★★★</div><p>막연하게 생각했던 브랜드 느낌을 정확히 짚어주셨어요. 오픈 후 문의량이 눈에 띄게 늘었습니다.</p><div class="ch-quote__who"><i>K</i><div><b>김○○ 대표</b><span>라이프스타일 브랜드</span></div></div></div>
+        <div class="ch-quote rv rv-d1"><div class="ch-quote__stars" aria-label="별점 5점">★★★★★</div><p>아임웹으로 이 정도까지 가능하다는 게 놀라웠습니다. 관리 교육 덕분에 지금은 직접 수정하고 있어요.</p><div class="ch-quote__who"><i>L</i><div><b>이○○ 원장</b><span>피부과 클리닉</span></div></div></div>
+        <div class="ch-quote rv rv-d2"><div class="ch-quote__stars" aria-label="별점 5점">★★★★★</div><p>일정이 촉박했는데 단계마다 빠르게 공유해 주셔서 안심하고 맡길 수 있었습니다. 다음 프로젝트도 함께해요.</p><div class="ch-quote__who"><i>P</i><div><b>박○○ 팀장</b><span>IT 스타트업 마케팅</span></div></div></div>
       </div>
     </div>
     <div class="ch-clients" aria-hidden="true">
@@ -281,33 +298,33 @@
 
   <!-- ================= FAQ ================= -->
   <section class="ch-section ch-faq">
-    <div class="ch-wrap ch-faq__grid">
-      <div class="ch-faq__side">
-        <span class="ch-eyebrow rv">FAQ</span>
-        <h2 class="ch-title rv rv-d1" style="margin-top:18px">자주 묻는<br><em class="ko-accent">질문</em></h2>
-        <p class="rv rv-d2">궁금한 점이 더 있으시다면 카카오톡으로 편하게 문의해 주세요.</p>
-        <a href="#" class="ch-btn ch-btn--dark rv rv-d3 js-kakao">카카오톡 문의 <span class="arr">→</span></a>
+    <div class="ch-wrap">
+      <div class="ch-shead rv">
+        <span class="ch-shead__en">FAQ</span>
+        <h2 class="ch-shead__title">자주 묻는 <span class="grad">질문</span></h2>
+        <p class="ch-shead__desc">궁금한 점이 더 있으시다면 카카오톡으로 편하게 문의해 주세요.</p>
       </div>
-      <div class="ch-faq__list" id="chFaq">
-        <div class="ch-faq__item is-open"><button class="ch-faq__q" type="button">제작 기간은 얼마나 걸리나요?<i></i></button><div class="ch-faq__a"><div><p>랜딩페이지는 약 1~2주, 브랜드 홈페이지는 3~4주, 쇼핑몰은 4~6주 정도 소요됩니다. 자료 전달 속도와 피드백 일정에 따라 달라질 수 있습니다.</p></div></div></div>
-        <div class="ch-faq__item"><button class="ch-faq__q" type="button">아임웹 요금제는 따로 결제해야 하나요?<i></i></button><div class="ch-faq__a"><div><p>네, 아임웹 요금제와 도메인은 고객님 명의로 직접 결제하시는 것을 권장드립니다. 사이트 소유권이 고객님께 있어 이후 관리가 자유롭습니다.</p></div></div></div>
-        <div class="ch-faq__item"><button class="ch-faq__q" type="button">완성 후 직접 수정할 수 있나요?<i></i></button><div class="ch-faq__a"><div><p>오픈 시 관리자 교육과 간단한 매뉴얼을 제공합니다. 텍스트·이미지·상품 등록 등은 직접 관리하실 수 있도록 구조를 설계합니다.</p></div></div></div>
-        <div class="ch-faq__item"><button class="ch-faq__q" type="button">사진이나 문구가 준비되지 않았어요.<i></i></button><div class="ch-faq__a"><div><p>걱정하지 않으셔도 됩니다. 카피 가이드와 무료 이미지 소스 선정을 도와드리며, 필요 시 촬영·카피라이팅 파트너를 연결해 드립니다.</p></div></div></div>
-        <div class="ch-faq__item"><button class="ch-faq__q" type="button">결제는 어떻게 진행되나요?<i></i></button><div class="ch-faq__a"><div><p>계약 시 착수금 50%, 오픈 전 잔금 50%로 진행됩니다. 세금계산서 발행이 가능합니다.</p></div></div></div>
+      <div class="ch-faq__list rv" id="chFaq">
+        <div class="ch-faq__item is-open"><button class="ch-faq__q" type="button"><em>Q</em>제작 기간은 얼마나 걸리나요?<i></i></button><div class="ch-faq__a"><div><p>랜딩페이지는 약 1~2주, 브랜드 홈페이지는 3~4주, 쇼핑몰은 4~6주 정도 소요됩니다. 자료 전달 속도와 피드백 일정에 따라 달라질 수 있습니다.</p></div></div></div>
+        <div class="ch-faq__item"><button class="ch-faq__q" type="button"><em>Q</em>아임웹 요금제는 따로 결제해야 하나요?<i></i></button><div class="ch-faq__a"><div><p>네, 아임웹 요금제와 도메인은 고객님 명의로 직접 결제하시는 것을 권장드립니다. 사이트 소유권이 고객님께 있어 이후 관리가 자유롭습니다.</p></div></div></div>
+        <div class="ch-faq__item"><button class="ch-faq__q" type="button"><em>Q</em>완성 후 직접 수정할 수 있나요?<i></i></button><div class="ch-faq__a"><div><p>오픈 시 관리자 교육과 간단한 매뉴얼을 제공합니다. 텍스트·이미지·상품 등록 등은 직접 관리하실 수 있도록 구조를 설계합니다.</p></div></div></div>
+        <div class="ch-faq__item"><button class="ch-faq__q" type="button"><em>Q</em>사진이나 문구가 준비되지 않았어요.<i></i></button><div class="ch-faq__a"><div><p>걱정하지 않으셔도 됩니다. 카피 가이드와 무료 이미지 소스 선정을 도와드리며, 필요 시 촬영·카피라이팅 파트너를 연결해 드립니다.</p></div></div></div>
+        <div class="ch-faq__item"><button class="ch-faq__q" type="button"><em>Q</em>결제는 어떻게 진행되나요?<i></i></button><div class="ch-faq__a"><div><p>계약 시 착수금 50%, 오픈 전 잔금 50%로 진행됩니다. 세금계산서 발행이 가능합니다.</p></div></div></div>
       </div>
+      <div class="ch-faq__more rv"><a href="#" class="ch-btn ch-btn--kakao js-kakao">카카오톡 문의</a></div>
     </div>
   </section>
 
   <!-- ================= CONTACT CTA ================= -->
   <section class="ch-cta" id="chContact">
-    <div class="ch-cta__box">
-      <h2 class="ch-cta__title rv">Let’s make<br>it <em class="serif">chic.</em></h2>
-      <div class="ch-cta__row">
-        <p class="rv rv-d1">새로운 홈페이지가 필요하신가요? 간단한 내용만 남겨주시면 영업일 기준 24시간 이내에 연락드립니다.</p>
-        <div class="ch-cta__btns rv rv-d2">
-          <a href="/contact" class="ch-btn ch-btn--light">프로젝트 문의하기 <span class="arr">→</span></a>
-          <a href="#" class="ch-btn ch-btn--line js-kakao">카카오톡 상담 <span class="arr">→</span></a>
-        </div>
+    <div class="ch-cta__bg" aria-hidden="true"><span class="ch-vis ch-vis--orb"></span></div>
+    <div class="ch-wrap ch-cta__in">
+      <span class="ch-shead__en rv">CONTACT</span>
+      <h2 class="ch-cta__title rv">Let’s make it <span class="grad">chic.</span></h2>
+      <p class="ch-cta__desc rv rv-d1">새로운 홈페이지가 필요하신가요? 간단한 내용만 남겨주시면<br class="pc"> 영업일 기준 24시간 이내에 연락드립니다.</p>
+      <div class="ch-cta__btns rv rv-d2">
+        <a href="/contact" class="ch-btn ch-btn--blue">프로젝트 문의하기</a>
+        <a href="#" class="ch-btn ch-btn--kakao js-kakao">카카오톡 상담</a>
       </div>
     </div>
   </section>
@@ -315,11 +332,12 @@
   <!-- ================= FOOTER ================= -->
   <footer class="ch-footer">
     <div class="ch-wrap">
-      <div class="ch-footer__top">
-        <div class="ch-footer__brand">
-          <a href="#chTop" class="ch-logo">CHIC<i class="dot"></i><small>studio</small></a>
-          <p>아임웹 전문 웹 디자인 스튜디오.<br>브랜드가 가장 빛나는 웹사이트를 만듭니다.</p>
-        </div>
+      <div class="ch-footer__brand">
+        <span class="ch-footer__mark">C</span>
+        <strong>CHIC STUDIO</strong>
+        <p>아임웹 전문 웹 디자인 스튜디오.<br>브랜드가 가장 빛나는 웹사이트를 만듭니다.</p>
+      </div>
+      <div class="ch-footer__cols">
         <div><h4>Menu</h4><ul><li><a href="#chAbout">About</a></li><li><a href="#chService">Service</a></li><li><a href="#chWorks">Works</a></li><li><a href="#chPrice">Price</a></li></ul></div>
         <div><h4>Contact</h4><ul><li><a href="mailto:hello@chicstudio.kr">hello@chicstudio.kr</a></li><li><a href="tel:01000000000">010-0000-0000</a></li><li>평일 10:00 – 19:00</li></ul></div>
         <div><h4>Social</h4><ul><li><a href="#" target="_blank" rel="noopener">Instagram</a></li><li><a href="#" target="_blank" rel="noopener">Blog</a></li><li><a href="#" class="js-kakao">KakaoTalk</a></li></ul></div>
@@ -327,18 +345,16 @@
       <div class="ch-footer__biz">
         <span>상호 : 시크스튜디오</span><span>대표 : 홍길동</span><span>사업자등록번호 : 000-00-00000</span><span>주소 : 서울특별시 ○○구 ○○로 00</span>
       </div>
-      <div class="ch-footer__bottom">
-        <div class="ch-footer__big">CHIC<em class="serif">.</em></div>
-        <p class="ch-footer__copy">© <span id="chYear">2026</span> CHIC STUDIO. All rights reserved.</p>
-      </div>
+      <p class="ch-footer__copy">© <span id="chYear">2026</span> CHIC STUDIO. All rights reserved.</p>
     </div>
   </footer>
 
   <!-- Floating -->
   <div class="ch-float">
     <a href="#" class="kakao js-kakao" aria-label="카카오톡 상담">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3C6.48 3 2 6.58 2 11c0 2.85 1.86 5.35 4.66 6.77-.15.53-.97 3.4-1 3.62 0 0-.02.17.09.23.11.07.24.02.24.02.32-.04 3.7-2.42 4.28-2.83.56.08 1.14.12 1.73.12 5.52 0 10-3.58 10-8S17.52 3 12 3z"/></svg>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3C6.48 3 2 6.58 2 11c0 2.85 1.86 5.35 4.66 6.77-.15.53-.97 3.4-1 3.62 0 0-.02.17.09.23.11.07.24.02.24.02.32-.04 3.7-2.42 4.28-2.83.56.08 1.14.12 1.73.12 5.52 0 10-3.58 10-8S17.52 3 12 3z"/></svg>
+      <span>상담</span>
     </a>
-    <button type="button" class="top" id="chTopBtn" aria-label="맨 위로">↑</button>
+    <button type="button" class="top" id="chTopBtn" aria-label="맨 위로">TOP</button>
   </div>
 </div>
