@@ -65,4 +65,4 @@ slideInterval: 5500                       // 배너 자동 넘김 간격(ms)
 ```
 
 브랜드명(CHIC STUDIO), 연락처, 사업자 정보, 요금, 후기 문구는 `body.html`에서 실제 정보로 교체하세요.
-메인 컬러는 `style.css` 상단 `--accent` 값 하나만 바꾸면 전체에 적용됩니다.
+메인 컬러는 `style.css` 상단 `--accent`(포인트 컬러, 현재 로열 블루 `#2b5cd6`)와 `--accent-soft`(연한 보조색) 두 값만 바꾸면 전체에 적용됩니다.

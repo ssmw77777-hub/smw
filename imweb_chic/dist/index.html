@@ -25,8 +25,8 @@
   --paper: #f3f0ea;
   --paper-2: #e9e4da;
   --white: #ffffff;
-  --accent: #e2572b;
-  --accent-soft: #f6d9cc;
+  --accent: #2b5cd6;      /* 메인 포인트 컬러 — 이 값만 바꾸면 전체 적용 */
+  --accent-soft: #dbe5fb; /* 연한 보조색 (체크 아이콘 배경 등) */
   --radius: 22px;
   --wrap: 1320px;
   --gutter: clamp(20px, 4vw, 48px);
@@ -140,7 +140,8 @@
 #chic .ch-hero { position: relative; min-height: 100vh; min-height: 100svh; display: flex; flex-direction: column; justify-content: flex-end; padding: 140px 0 48px; overflow: hidden; }
 #chic .ch-hero__blob {
   position: absolute; width: 56vw; max-width: 820px; aspect-ratio: 1; right: -12vw; top: -14vw; border-radius: 50%;
-  background: radial-gradient(circle at 35% 35%, #f19a74 0%, var(--accent) 38%, rgba(226,87,43,0) 70%);
+  background: radial-gradient(circle at 35% 35%, var(--accent) 0%, transparent 70%);
+  background: radial-gradient(circle at 35% 35%, color-mix(in srgb, var(--accent), #fff 35%) 0%, var(--accent) 38%, transparent 70%);
   filter: blur(20px); opacity: .55; animation: chBlob 14s ease-in-out infinite alternate; pointer-events: none;
 }
 @keyframes chBlob { 0% { transform: translate(0,0) scale(1); } 100% { transform: translate(-6vw, 8vw) scale(1.12); } }
@@ -243,7 +244,7 @@
 #chic .ch-about__counter strong sup { font-size: .4em; color: var(--accent); vertical-align: top; margin-left: 2px; }
 #chic .ch-about__counter span { display: block; margin-top: 10px; font-size: 14px; color: var(--mute); }
 #chic .ch-about__visual { position: sticky; top: 120px; aspect-ratio: 4 / 5; border-radius: var(--radius); overflow: hidden; background: var(--ink); color: var(--paper); padding: 36px; display: flex; flex-direction: column; justify-content: space-between; }
-#chic .ch-about__visual::before { content: ""; position: absolute; width: 140%; aspect-ratio: 1; left: -20%; bottom: -70%; border-radius: 50%; background: radial-gradient(circle, var(--accent) 0%, rgba(226,87,43,0) 65%); opacity: .8; }
+#chic .ch-about__visual::before { content: ""; position: absolute; width: 140%; aspect-ratio: 1; left: -20%; bottom: -70%; border-radius: 50%; background: radial-gradient(circle, var(--accent) 0%, transparent 65%); opacity: .8; }
 #chic .ch-about__visual > * { position: relative; }
 #chic .ch-about__visual .big { font-family: var(--serif); font-style: italic; font-size: clamp(60px, 7vw, 110px); line-height: .9; }
 #chic .ch-about__visual ul li { display: flex; justify-content: space-between; padding: 14px 0; border-top: 1px solid rgba(255,255,255,.18); font-size: 14px; }
@@ -328,8 +329,13 @@
 #chic .ch-plan--hot .ch-plan__price { border-color: rgba(255,255,255,.15); }
 #chic .ch-plan__price small { font-size: 16px; font-weight: 500; letter-spacing: 0; margin-left: 4px; color: var(--mute); }
 #chic .ch-plan__list { flex: 1; display: grid; gap: 12px; align-content: start; font-size: 15px; }
-#chic .ch-plan__list li { display: flex; gap: 10px; align-items: flex-start; }
-#chic .ch-plan__list li::before { content: ""; flex-shrink: 0; width: 18px; height: 18px; margin-top: 3px; border-radius: 50%; background: var(--accent-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e2572b' stroke-width='3'%3E%3Cpath d='M5 12l5 5 9-10'/%3E%3C/svg%3E") center/60% no-repeat; }
+#chic .ch-plan__list li { position: relative; display: flex; gap: 10px; align-items: flex-start; }
+#chic .ch-plan__list li::before { content: ""; flex-shrink: 0; width: 18px; height: 18px; margin-top: 3px; border-radius: 50%; background: var(--accent-soft); }
+#chic .ch-plan__list li::after {
+  content: ""; position: absolute; left: 0; top: 3px; width: 18px; height: 18px; background: var(--accent);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='3'%3E%3Cpath d='M5 12l5 5 9-10'/%3E%3C/svg%3E") center/60% no-repeat;
+          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='3'%3E%3Cpath d='M5 12l5 5 9-10'/%3E%3C/svg%3E") center/60% no-repeat;
+}
 #chic .ch-plan .ch-btn { margin-top: 36px; justify-content: center; }
 #chic .ch-price__note { margin-top: 24px; font-size: 13px; color: var(--mute); text-align: center; }
 
